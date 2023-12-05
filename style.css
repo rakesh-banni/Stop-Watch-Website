@@ -1,0 +1,99 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+  }
+  
+#timecontainer{
+    text-align: center;
+}
+
+.btn{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    font-family: consolas, monospace;
+    background-color:#e74c3c ;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 40px;
+    font-size: 20px;
+    transition: background-color 0.3s ease-in-out, transform .3s ease-in-out;;
+}
+.btn:hover {
+   
+    background-color: #4285f4; /* Change color on hover */
+    transform: scale(1.1) rotate(360deg); 
+  }
+
+#startbtn {
+  background-color: #2ecc71; /* Green background for start button */
+  color: white;
+}
+#startbtn:hover{
+  animation: pulse 0.3s infinite alternate;
+}
+
+#resetbtn {
+  background-color: #e74c3c; /* Red background for reset button */
+  color: white;
+}
+
+#resetbtn:hover{
+  animation: pulse 0.3s infinite alternate;
+}
+
+#pausebtn{
+    background-color: orange; /* Red background for reset button */
+    color: white;
+}
+
+#pausebtn:hover{
+  animation: pulse 0.3s infinite alternate;
+}
+
+#displayTime{
+    position: relative;
+    width: 290px;
+    height: 220px;
+    line-height: 150px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    font-family: consolas;
+    font-size:30px;
+    margin: 10px auto;
+    animation: pulse 0.5s infinite alternate;
+    transform-style: preserve-3d;
+    padding-top: 80px;
+    animation-play-state: paused;
+}
+
+#displayTime:hover{
+    animation: rotate 0.8s ease-in-out; 
+}  
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
